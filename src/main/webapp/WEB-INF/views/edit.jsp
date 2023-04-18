@@ -8,6 +8,28 @@
     <title>Изменить</title>
 </head>
 <body>
-<h2>edit page</h2>
+<h2>Изменить контакт</h2>
+   <br>
+<form action="http://localhost:6060/edit" method="POST">
+    <input type="hidden" name="id" value="${editContact.id}">
+    <input type="text" name="name" id="name" value="${editContact.name}">
+    <label for="name">Имя </label>
+    <br><br>
+    <input type="text" name="lastName" id="lastName" value="${editContact.lastName}">
+    <label for="lastName">Фамилия</label>
+    <br><br>
+    <input type="email" name="email" id="email" value="${editContact.email}">
+    <label for="email">Email </label>
+    <br><br>
+    <input type="tel" name="tel" id="tel" value="${editContact.tel}">
+    <label for="tel">Телефон</label>
+    <br><br>
+    <input type="submit" value="Сохранить изменения">
+
+</form>
+<br>
+<a href="http://localhost:6060/contacts">
+    <button>Отменить изменения</button>
+</a>
 </body>
 </html>

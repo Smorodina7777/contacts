@@ -10,10 +10,22 @@
 <body>
 <h2>Список контактов</h2>
 <table>
-    <c:forEach var="contact" items="${contactList}">
 
+    <c:forEach var="contact" items="${contactList}">
+        <tr>
+            <td>${contact.id}</td>
+            <td> ${contact.name}</td>
+            <td> ${contact.lastName}</td>
+            <td>Email: ${contact.email}</td>
+            <td>Телефон: ${contact.tel}</td>
+            <td><a href="http://localhost:6060/contacts/${contact.id}">
+                <button>Удалить</button>
+            </a>
+                <a href="http://localhost:6060/edit/${contact.id}">
+                    <button>Изменить</button>
+                </a></td>
+        </tr>
     </c:forEach>
 </table>
-<h2><a href="/edit">edit page</a> </h2>
 </body>
 </html>

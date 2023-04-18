@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +9,13 @@
     <title>Добавить</title>
 </head>
 <body>
-<h4>Добавить новый контакт</h4>
-<form action="http://localhost:6060/contacts" method="post">
+<h3>Добавить новый контакт</h3>
+
+
+<form action="http://localhost:6060/contacts/" method="post" >
     <label>
-        <input type="text" name="id">
-    </label>Идентификатор<br><br>
+        <input type="number" name="id">
+    </label>Id<br><br>
     <label>
         <input type="text" name="name">
     </label>Имя<br><br>
@@ -27,7 +30,5 @@
     </label>Телефон<br><br>
     <input type="submit" value="Добавить">
 </form>
-
-<h2><a href="/contacts">contacts</a> </h2>
 </body>
 </html>

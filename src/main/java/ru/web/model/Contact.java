@@ -14,10 +14,10 @@ import lombok.ToString;
 @ToString
 @Builder
 public class Contact {
-    Long id;
+    Integer id;
     String name;
     String lastName;
     String email;
-    long tel;
+    Long tel;
 }
 
