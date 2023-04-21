@@ -12,10 +12,8 @@
 <h3>Добавить новый контакт</h3>
 
 
-<form action="http://localhost:6060/contacts/" method="post" >
-    <label>
-        <input type="number" name="id">
-    </label>Id<br><br>
+<form action="http://localhost:6060/contacts/save" method="post" >
+
     <label>
         <input type="text" name="name">
     </label>Имя<br><br>

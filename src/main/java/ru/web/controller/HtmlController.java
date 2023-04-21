@@ -27,8 +27,8 @@ public class HtmlController {
         return "contacts";
     }
 
-        @RequestMapping(value = "/", method = RequestMethod.POST)
-    public String saveContact(Contact contact, Model model) {
+        @RequestMapping(value = "/contacts/save", method = RequestMethod.POST)
+    public String saveContact(@ModelAttribute Contact contact, Model model) {
         System.out.println(contact);
         contactRepo.saveContact(contact);
 //        model.addAttribute("contact", contact);
